@@ -165,7 +165,7 @@
 
  bool can_survive (const State& s, const Room& r)
  {
-   // if monster is  not in the room - safe
+  
    if (monster_in_the_room(r) == false)
    {
      return true;
@@ -178,7 +178,7 @@
    hero.stacking_off = 0;
    hero.stacking_def = 0;
 
-   //присваиваем герою фичи от айтемов
+  
    for (const auto& item: s.equip)
    {
      if (item.has_value())
@@ -213,8 +213,7 @@
      return result == B_WINS;
    }
  }
-   // check if the monster is in the room
-   // bool for stealth
+  
  std::vector<Action> find_shortest_path(
    const std::vector<Room>& rooms,
    const std::vector<RoomId>& entrances,
@@ -336,7 +335,7 @@
           }
         }
 
-     //pickup
+    
      if (current_state.can_pickup == true)
      {
        for (size_t i = 0; i < r.items.size(); i++)
